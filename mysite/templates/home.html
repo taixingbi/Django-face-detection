@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <form action="{{BASIC_DOMAIN}}camera">
+    GO <input class="button" type="submit" value="Camera" /> 
+  </form>
+
+
+  <table>
+    <tr>
+      <th>Key</th>
+      <th>Value</th>
+    </tr>
+
+    <tr>
+      <td>face detection</td>
+      <td>video stream face detection: face size is 10*10cm </td>
+    </tr>
+   
+    <tr>
+      <td>lib</td>
+      <td>  
+        <a 
+          href="https://en.wikipedia.org/wiki/OpenCV"> 
+          OpenCV
+        </a>
+      </td>  
+    </tr>
+
+    <tr>
+      <td>algorithm</td>
+      <td>  
+            <a 
+              href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html"> 
+              Cascade Classifier: 
+            </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td> process </td>
+      <td>  1. convert a rgb frame to gray.  
+            2. based on Cascade Classifier to predict bounding box. 
+            3. resize  a frame to 10*10cm  </td>
+    </tr>
+
+    <tr>
+      <td>(one frame)time consuming </td>
+      <td>  0.04 ~ 0.08 s (based on current server)  </td>
+    </tr>
+
+    <tr>
+      <td>algorithm</td>
+      <td>  openCV  </td>
+    </tr>
+
+
+
+
+  </table>
+
+{% endblock %}
+
+
